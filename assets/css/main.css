@@ -1,4 +1,4 @@
-@import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.css);
+@import url(https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css);
 @import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/brands.css);
 @import url(fonts.css);
 
@@ -465,7 +465,7 @@
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: 'FontAwesome';
 				font-weight: 900;
 			}
 
@@ -541,7 +541,7 @@
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'FontAwesome';
 			font-weight: 400;
 		}
 
@@ -559,9 +559,6 @@
 
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
-		}
-		.icon.fa:before {
-			font-family: 'Font Awesome 5 Free';
 		}
 
 /* List */
