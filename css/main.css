@@ -1,6 +1,5 @@
 @import url(all.min.css);
-/* @import url(brands.min.css);  */
-@import url(fonts.css);
+/* @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,200,200italic"); */
 
 /*
 	Identity by HTML5 UP
@@ -465,7 +464,7 @@
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: 'Font Awesome 6 Free';
 				font-weight: 900;
 			}
 
@@ -541,7 +540,7 @@
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Font Awesome 6 Free';
 			font-weight: 400;
 		}
 
@@ -549,16 +548,12 @@
 			display: none;
 		}
 
-		.icon:before {
-			line-height: inherit;
-		}
-
 		.icon.solid:before {
 			font-weight: 900;
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: 'Font Awesome 6 Brands';
 		}
 
 /* List */
@@ -771,7 +766,7 @@
 					text-rendering: auto;
 					line-height: 1;
 					text-transform: none !important;
-					font-family: 'Font Awesome 5 Free';
+					font-family: 'Font Awesome 6 Free';
 					font-weight: 400;
 				}
 
