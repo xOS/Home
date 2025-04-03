@@ -18,18 +18,93 @@
 		<meta property="og:image" content="https://www.nange.cn/image/others/bingo.jpeg">
 		<meta name="msapplication-TileColor" content="#0F7D00">
 		<link rel="stylesheet" href="css/main.css" />
-		<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/all.min.css">
 		<style>
 			/* 强制覆盖可能的冲突样式 */
 			[class^="fa-"], [class*=" fa-"]::before {
 				font-family: "Font Awesome 5 Brands", "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Brands", "Font Awesome 6 Pro", "Font Awesome 6 Free", sans-serif !important;
 				font-weight: 900 !important;
+				}
+			/* Modal 样式调整 */
+			#modal {
+				display: none;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: #ffffff50;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+				width: 90%;
+				max-width: 500px;
+				overflow-y: auto; /* 添加滚动条 */
+				z-index: 1000;
+				font-size: 0.9em; /* 缩小字体 */
+			}
+			#modal h2 {
+				margin-top: 0;
+				font-size: 1.3em; /* 缩小标题字体 */
+				color: #333;
+			}
+			#modal a#close-modal {
+				float: right;
+				text-decoration: none;
+				font-size: 1.3em; /* 缩小关闭按钮字体 */
+				color: #999;
+			}
+			#modal a#close-modal:hover {
+				color: #333;
+			}
+			#overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.6); /* 修复背景颜色 */
+				backdrop-filter: blur(10px); /* 磨砂效果 */
+				-webkit-backdrop-filter: blur(10px); /* 兼容 Safari */
+				z-index: 999;
 			}
 		</style>
 		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+		<!-- Modal -->
+		<div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#ffffff50; padding:20px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;">
+			<a href="#" id="close-modal" style="float:right; text-decoration:none; font-size:20px;">&times;</a>
+			<!-- <hr /> -->
+			<h2>给我留言</h2>
+			<form method="post" action="#" id="send-message">
+				<div class="fields">
+					<div class="field">
+						<input type="text" name="name" id="name" placeholder="姓名" />
+					</div>
+					<div class="field">
+						<input type="email" name="email" id="email" placeholder="电子邮件" />
+					</div>
+					<div class="field">
+						<textarea name="message" id="message" placeholder="消息内容" rows="4"></textarea>
+					</div>
+					<!-- <div class="field">
+						<input type="checkbox" id="human" name="human" /><label for="human">我是真人</label>
+					</div> -->
+					<div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAABDsN3iq_ff41OVi"
+  data-callback="javascriptCallback"
+></div>
+				</div>
+				<ul class="actions special">
+					<!-- <li><a href="#" class="button">发送</a></li> -->
+					<li><input type="submit" value="发送" class="primary" /></li>
+				</ul>
+			</form>
+			<!-- <hr /> -->
+		</div>
+		<div id="overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -40,55 +115,19 @@
 							<h1>翠花</h1>
 							<p>这个家伙很懒，什么都没留下！</p>
 						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field">
-									<input type="text" name="name" id="name" placeholder="Name" />
-								</div>
-								<div class="field">
-									<input type="email" name="email" id="email" placeholder="Email" />
-								</div>
-								<div class="field">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-								<div class="field">
-									<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-								</div>
-								<div class="field">
-									<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-								</div>
-								<div class="field">
-									<label>But are you a robot?</label>
-									<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-									<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-								</div>
-							</div>
-							<ul class="actions special">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						-->
 						<footer>
 							<ul class="icons">
 								<li><a href="http://www.nange.cn/" target="_blank" class="icon fa-solid fa-blog" title="每天都是最好的自己。"><span class="label">博客</span></a></li>
 								<li><a href="http://cfp.nange.cn/" target="_blank" rel="noopener" class="icon fa-solid fa-layer-group" title="云解析"><span class="label">云解析</span></a></li>
 								<li><a href="https://donate.stripe.com/28obMffW78Pogb6145" target="_blank" rel="noopener" class="icon fa-brands fa-stripe-s" title="捐赠支持"><span class="label">捐赠支持</span></a></li>
-								<li><a href="http://server.nange.cn/" target="_blank" rel="noopener" class="icon fa-solid fa-server" title="服务器探针"><span class="label">服务器探针</span></a></li>
+								<li><a href="http://server.nange.cn/" target="_blank" rel="noopener" class="icon fa-regular fa-server" title="服务器探针"><span class="label">服务器探针</span></a></li>
 								<li><a href="http://status.nange.cn/" target="_blank" rel="noopener" class="icon fa-brands fa-sellsy" title="服务状态"><span class="label">服务状态</span></a></li>
 								<li><a href="http://www.instagram.com/Pephne/" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-instagram" title="关注我的 Instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="http://t.me/SpecialHer" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-telegram" title="我的写真相册"><span class="label">Telegram</span></a></li>
 								<li><a href="http://github.com/xOS" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-github-alt"  title="Fork me on Github"><span class="label">Github</span></a></li>
 								<li><a href="http://x.com/Pephne" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-x-twitter" title="Twitter 关注我"><span class="label">Twitter</span></a></li>
 								<li><a href="mailto:about@nange.cn" target="_blank" rel="nofollow noopener" class="icon fa-solid fa-envelope" title="给我发邮件"><span class="label">Email</span></a></li>
+								<!-- <li><a href="#about" class="icon fa-regular fa-messages" title="给我留言"><span class="label">留言</span></a></li> -->
 							</ul>
 						</footer>
 					</section>
@@ -111,5 +150,21 @@
 			<script>
 			console.log("%c%c楠格%chttps://www.nange.cn", "line-height:28px;", "line-height:28px;padding:4px;background:#2ccbe6;color:#FADFA3;font-size:14px;", "padding:4px 4px 4px 2px;background:#ff146d;color:green;line-height:28px;font-size:12px;");
             </script>
+			<!-- <script>
+				document.querySelector('a[href="#about"]').addEventListener('click', function(event) {
+					event.preventDefault();
+					document.getElementById('modal').style.display = 'block';
+					document.getElementById('overlay').style.display = 'block';
+				});
+				document.getElementById('close-modal').addEventListener('click', function(event) {
+					event.preventDefault();
+					document.getElementById('modal').style.display = 'none';
+					document.getElementById('overlay').style.display = 'none';
+				});
+				document.getElementById('overlay').addEventListener('click', function() {
+					document.getElementById('modal').style.display = 'none';
+					this.style.display = 'none';
+				});
+			</script> -->
 	</body>
 </html>
