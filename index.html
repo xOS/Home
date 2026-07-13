@@ -14,14 +14,1101 @@
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="Cache-Control" content="no-transform">
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+		<link rel="preload" href="image/avatar.webp" as="image" type="image/webp" fetchpriority="high">
 		<style>
-			/* 强制覆盖可能的冲突样式 */
-			[class^="fa-"], [class*=" fa-"]::before {
-				font-family: "Font Awesome 5 Brands", "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Brands", "Font Awesome 6 Pro", "Font Awesome 6 Free", sans-serif !important;
-				font-weight: 900 !important;
+/*
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Icon (alt) */
+
+	html, body, div, span, applet, object,
+	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, abbr, acronym, address, big, cite,
+	code, del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var, b,
+	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody,
+	tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption,
+	footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+
+	body {
+		line-height: 1;
+	}
+
+	ol, ul {
+		list-style: none;
+	}
+
+	blockquote, q {
+		quotes: none;
+	}
+
+		blockquote:before, blockquote:after, q:before, q:after {
+			content: '';
+			content: none;
+		}
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+	body {
+		-webkit-text-size-adjust: none;
+	}
+
+	mark {
+		background-color: transparent;
+		color: inherit;
+	}
+
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	input, select, textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+	}
+
+/* Basic */
+
+	@media screen and (max-width: 480px) {
+
+		html, body {
+			min-width: 320px;
+		}
+
+	}
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+		transition: none !important;
+	}
+
+	html {
+		height: 100%;
+	}
+
+	body {
+		height: 100%;
+		background-color: #ffffff;
+		background-image: url("image/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("image/bg.jpg");
+		background-image: url("image/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("image/bg.jpg");
+		background-image: url("image/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("image/bg.jpg");
+		background-image: url("image/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("image/bg.jpg");
+		background-repeat: repeat,			no-repeat,			no-repeat;
+		background-size: 100px 100px, cover,				cover;
+		background-position: top left,		center center,		bottom center;
+		background-attachment: fixed,			fixed,				fixed;
+	}
+
+		body:after {
+			content: '';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: inherit;
+			opacity: 0;
+			z-index: 1;
+			background-color: #ffffff;
+			background-image: url("image/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image: url("image/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image: url("image/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-image: url("image/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+			background-repeat: repeat,			no-repeat;
+			background-size: 100px 100px, cover;
+			background-position: top left,		center center;
+			-moz-transition: opacity 1.75s ease-out;
+			-webkit-transition: opacity 1.75s ease-out;
+			-ms-transition: opacity 1.75s ease-out;
+			transition: opacity 1.75s ease-out;
+		}
+
+		body.is-preload:after {
+			opacity: 1;
+		}
+
+/* Type */
+
+	body, input, select, textarea {
+		color: #414f57;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 14pt;
+		font-weight: 300;
+		line-height: 2;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			body, input, select, textarea {
+				font-size: 11pt;
+			}
+
+		}
+
+		@media screen and (max-width: 480px) {
+
+			body, input, select, textarea {
+				font-size: 10pt;
+				line-height: 1.75;
+			}
+
+		}
+
+	a {
+		-moz-transition: color 0.2s ease, border-color 0.2s ease;
+		-webkit-transition: color 0.2s ease, border-color 0.2s ease;
+		-ms-transition: color 0.2s ease, border-color 0.2s ease;
+		transition: color 0.2s ease, border-color 0.2s ease;
+		color: inherit;
+		text-decoration: none;
+	}
+
+		a:before {
+			-moz-transition: color 0.2s ease, text-shadow 0.2s ease;
+			-webkit-transition: color 0.2s ease, text-shadow 0.2s ease;
+			-ms-transition: color 0.2s ease, text-shadow 0.2s ease;
+			transition: color 0.2s ease, text-shadow 0.2s ease;
+		}
+
+		a:hover {
+			color: #ff7496;
+		}
+
+	strong, b {
+		color: #313f47;
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p {
+		margin: 0 0 1.5em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #313f47;
+		line-height: 1.5;
+		margin: 0 0 0.75em 0;
+	}
+
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+	h1 {
+		font-size: 1.85em;
+		letter-spacing: 0.22em;
+		margin: 0 0 0.525em 0;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	h4 {
+		font-size: 1em;
+	}
+
+	h5 {
+		font-size: 1em;
+	}
+
+	h6 {
+		font-size: 1em;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		h1 {
+			font-size: 1.65em;
+		}
+
+	}
+
+	sub {
+		font-size: 0.8em;
+		position: relative;
+		top: 0.5em;
+	}
+
+	sup {
+		font-size: 0.8em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	hr {
+		border: 0;
+		border-bottom: solid 1px #c8cccf;
+		margin: 3em 0;
+	}
+
+/* Form */
+
+	form {
+		margin: 0 0 1.5em 0;
+	}
+
+		form > :last-child {
+			margin-bottom: 0;
+		}
+
+		form > .fields {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			width: calc(100% + 2.25em);
+			margin: -1.125em 0 1.5em -1.125em;
+		}
+
+			form > .fields > .field {
+				-moz-flex-grow: 0;
+				-webkit-flex-grow: 0;
+				-ms-flex-grow: 0;
+				flex-grow: 0;
+				-moz-flex-shrink: 0;
+				-webkit-flex-shrink: 0;
+				-ms-flex-shrink: 0;
+				flex-shrink: 0;
+				padding: 1.125em 0 0 1.125em;
+				width: calc(100% - 1.125em);
+			}
+
+				form > .fields > .field.half {
+					width: calc(50% - 0.5625em);
 				}
+
+				form > .fields > .field.third {
+					width: calc(100%/3 - 0.375em);
+				}
+
+				form > .fields > .field.quarter {
+					width: calc(25% - 0.28125em);
+				}
+
+		@media screen and (max-width: 480px) {
+
+			form > .fields {
+				width: calc(100% + 2.25em);
+				margin: -1.125em 0 1.5em -1.125em;
+			}
+
+				form > .fields > .field {
+					padding: 1.125em 0 0 1.125em;
+					width: calc(100% - 1.125em);
+				}
+
+					form > .fields > .field.half {
+						width: calc(100% - 1.125em);
+					}
+
+					form > .fields > .field.third {
+						width: calc(100% - 1.125em);
+					}
+
+					form > .fields > .field.quarter {
+						width: calc(100% - 1.125em);
+					}
+
+		}
+
+	label {
+		color: #313f47;
+		display: block;
+		font-size: 0.9em;
+		margin: 0 0 0.75em 0;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	select,
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		border-radius: 4px;
+		border: solid 1px #c8cccf;
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0 1em;
+		text-decoration: none;
+		width: 100%;
+	}
+
+		input[type="text"]:invalid,
+		input[type="password"]:invalid,
+		input[type="email"]:invalid,
+		input[type="tel"]:invalid,
+		select:invalid,
+		textarea:invalid {
+			box-shadow: none;
+		}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		input[type="tel"]:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #ff7496;
+		}
+
+	select {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' preserveAspectRatio='none' viewBox='0 0 40 40'%3E%3Cpath d='M9.4,12.3l10.4,10.4l10.4-10.4c0.2-0.2,0.5-0.4,0.9-0.4c0.3,0,0.6,0.1,0.9,0.4l3.3,3.3c0.2,0.2,0.4,0.5,0.4,0.9 c0,0.4-0.1,0.6-0.4,0.9L20.7,31.9c-0.2,0.2-0.5,0.4-0.9,0.4c-0.3,0-0.6-0.1-0.9-0.4L4.3,17.3c-0.2-0.2-0.4-0.5-0.4-0.9 c0-0.4,0.1-0.6,0.4-0.9l3.3-3.3c0.2-0.2,0.5-0.4,0.9-0.4S9.1,12.1,9.4,12.3z' fill='%23c8cccf' /%3E%3C/svg%3E");
+		background-size: 1.25rem;
+		background-repeat: no-repeat;
+		background-position: calc(100% - 1rem) center;
+		height: 2.75em;
+		padding-right: 2.75em;
+		text-overflow: ellipsis;
+	}
+
+		select option {
+			color: #313f47;
+			background: #ffffff;
+		}
+
+		select:focus::-ms-value {
+			background-color: transparent;
+		}
+
+		select::-ms-expand {
+			display: none;
+		}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		height: 2.75em;
+		background: #ffffff50;
+	}
+
+	textarea {
+		padding: 0.75em 1em;
+		background: #ffffff50;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		display: block;
+		float: left;
+		margin-right: -2em;
+		opacity: 0;
+		width: 1em;
+		z-index: -1;
+	}
+
+		input[type="checkbox"] + label,
+		input[type="radio"] + label {
+			text-decoration: none;
+			color: #414f57;
+			cursor: pointer;
+			display: inline-block;
+			font-size: 1em;
+			font-weight: 300;
+			padding-left: 2.4em;
+			padding-right: 0.75em;
+			position: relative;
+		}
+
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				text-transform: none !important;
+				font-family: inherit;
+				font-weight: 900;
+			}
+
+			input[type="checkbox"] + label:before,
+			input[type="radio"] + label:before {
+				border-radius: 4px;
+				border: solid 1px #c8cccf;
+				content: '';
+				display: inline-block;
+				font-size: 0.8em;
+				height: 2.0625em;
+				left: 0;
+				line-height: 2.0625em;
+				position: absolute;
+				text-align: center;
+				top: 0.15em;
+				width: 2.0625em;
+			}
+
+		input[type="checkbox"]:checked + label:before,
+		input[type="radio"]:checked + label:before {
+			color: #ff7496;
+			content: '\f00c';
+		}
+
+		input[type="checkbox"]:focus + label:before,
+		input[type="radio"]:focus + label:before {
+			border-color: #ff7496;
+		}
+
+	input[type="checkbox"] + label:before {
+		border-radius: 4px;
+	}
+
+	input[type="radio"] + label:before {
+		border-radius: 100%;
+	}
+
+	::-webkit-input-placeholder {
+		color: #616f77 !important;
+		opacity: 1.0;
+	}
+
+	:-moz-placeholder {
+		color: #616f77 !important;
+		opacity: 1.0;
+	}
+
+	::-moz-placeholder {
+		color: #616f77 !important;
+		opacity: 1.0;
+	}
+
+	:-ms-input-placeholder {
+		color: #616f77 !important;
+		opacity: 1.0;
+	}
+
+/* Icon */
+
+	.icon {
+		text-decoration: none;
+		position: relative;
+		border-bottom: none;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: inherit;
+			font-weight: 400;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: inherit;
+		}
+
+		.icon.duotone:before {
+			font-family: inherit;
+		}
+
+/* List */
+
+	ol {
+		list-style: decimal;
+		margin: 0 0 1.5em 0;
+		padding-left: 1.25em;
+	}
+
+		ol li {
+			padding-left: 0.25em;
+		}
+
+	ul {
+		list-style: disc;
+		margin: 0 0 1.5em 0;
+		padding-left: 1em;
+	}
+
+		ul li {
+			padding-left: 0.5em;
+		}
+
+		ul.alt {
+			list-style: none;
+			padding-left: 0;
+		}
+
+			ul.alt li {
+				border-top: solid 1px #c8cccf;
+				padding: 0.5em 0;
+			}
+
+				ul.alt li:first-child {
+					border-top: 0;
+					padding-top: 0;
+				}
+
+	dl {
+		margin: 0 0 1.5em 0;
+	}
+
+		dl dt {
+			display: block;
+			margin: 0 0 0.75em 0;
+		}
+
+		dl dd {
+			margin-left: 1.5em;
+		}
+
+/* Actions */
+
+	ul.actions {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		cursor: default;
+		list-style: none;
+		margin-left: -0.75em;
+		padding-left: 0;
+	}
+
+		ul.actions li {
+			padding: 0 0 0 0.75em;
+			vertical-align: middle;
+		}
+
+		ul.actions.special {
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			width: 100%;
+			margin-left: 0;
+		}
+
+			ul.actions.special li:first-child {
+				padding-left: 0;
+			}
+
+		ul.actions.stacked {
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			margin-left: 0;
+		}
+
+			ul.actions.stacked li {
+				padding: 0.975em 0 0 0;
+			}
+
+				ul.actions.stacked li:first-child {
+					padding-top: 0;
+				}
+
+		ul.actions.fit {
+			width: calc(100% + 0.75em);
+		}
+
+			ul.actions.fit li {
+				-moz-flex-grow: 1;
+				-webkit-flex-grow: 1;
+				-ms-flex-grow: 1;
+				flex-grow: 1;
+				-moz-flex-shrink: 1;
+				-webkit-flex-shrink: 1;
+				-ms-flex-shrink: 1;
+				flex-shrink: 1;
+				width: 100%;
+			}
+
+				ul.actions.fit li > * {
+					width: 100%;
+				}
+
+			ul.actions.fit.stacked {
+				width: 100%;
+			}
+
+		@media screen and (max-width: 480px) {
+
+			ul.actions:not(.fixed) {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				margin-left: 0;
+				width: 100% !important;
+			}
+
+				ul.actions:not(.fixed) li {
+					-moz-flex-grow: 1;
+					-webkit-flex-grow: 1;
+					-ms-flex-grow: 1;
+					flex-grow: 1;
+					-moz-flex-shrink: 1;
+					-webkit-flex-shrink: 1;
+					-ms-flex-shrink: 1;
+					flex-shrink: 1;
+					padding: 0.75em 0 0 0;
+					text-align: center;
+					width: 100%;
+				}
+
+					ul.actions:not(.fixed) li > * {
+						width: 100%;
+					}
+
+					ul.actions:not(.fixed) li:first-child {
+						padding-top: 0;
+					}
+
+					ul.actions:not(.fixed) li input[type="submit"],
+					ul.actions:not(.fixed) li input[type="reset"],
+					ul.actions:not(.fixed) li input[type="button"],
+					ul.actions:not(.fixed) li button,
+					ul.actions:not(.fixed) li .button {
+						width: 100%;
+					}
+
+						ul.actions:not(.fixed) li input[type="submit"].icon:before,
+						ul.actions:not(.fixed) li input[type="reset"].icon:before,
+						ul.actions:not(.fixed) li input[type="button"].icon:before,
+						ul.actions:not(.fixed) li button.icon:before,
+						ul.actions:not(.fixed) li .button.icon:before {
+							margin-left: -0.5rem;
+						}
+
+		}
+
+/* Icons */
+
+	ul.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+		margin-top: -0.675em;
+	}
+
+		ul.icons li {
+			display: inline-block;
+			padding: 0.675em 0.5em;
+		}
+
+			ul.icons li a {
+				text-decoration: none;
+				position: relative;
+				display: block;
+				width: 3.75em;
+				height: 3.75em;
+				border-radius: 100%;
+				border: solid 1px #c8cccf;
+				line-height: 3.75em;
+				overflow: hidden;
+				text-align: center;
+				text-indent: 3.75em;
+				white-space: nowrap;
+			}
+
+				ul.icons li a:before {
+					-moz-osx-font-smoothing: grayscale;
+					-webkit-font-smoothing: antialiased;
+					display: inline-block;
+					font-style: normal;
+					font-variant: normal;
+					text-rendering: auto;
+					line-height: 1;
+					text-transform: none !important;
+					font-family: inherit;
+					font-weight: 400;
+				}
+
+				ul.icons li a:before {
+					color: #ffffff;
+					/* text-shadow: 1.25px 0px 0px #c8cccf, -1.25px 0px 0px #c8cccf, 0px 1.25px 0px #c8cccf, 0px -1.25px 0px #c8cccf; */
+				}
+
+				ul.icons li a:hover:before {
+					text-shadow: 1.25px 0px 0px #ff7496, -1.25px 0px 0px #ff7496, 0px 1.25px 0px #ff7496, 0px -1.25px 0px #ff7496;
+				}
+
+				ul.icons li a:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: inherit;
+					height: inherit;
+					font-size: 1.85rem;
+					line-height: inherit;
+					text-align: center;
+					text-indent: 0;
+				}
+
+				ul.icons li a:hover {
+					border-color: #ff7496;
+				}
+
+		@media screen and (max-width: 480px) {
+
+			ul.icons li a:before {
+				font-size: 1.5rem;
+			}
+
+		}
+
+/* Button */
+
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		display: inline-block;
+		height: 2.75em;
+		line-height: 2.75em;
+		padding: 0 1.5em;
+		background-color: transparent;
+		border-radius: 4px;
+		border: solid 1px #c8cccf;
+		color: #414f57 !important;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			border-color: #ff7496;
+			color: #ff7496 !important;
+		}
+
+		input[type="submit"].icon,
+		input[type="reset"].icon,
+		input[type="button"].icon,
+		button.icon,
+		.button.icon {
+			padding-left: 1.35em;
+		}
+
+			input[type="submit"].icon:before,
+			input[type="reset"].icon:before,
+			input[type="button"].icon:before,
+			button.icon:before,
+			.button.icon:before {
+				margin-right: 0.5em;
+			}
+
+		input[type="submit"].fit,
+		input[type="reset"].fit,
+		input[type="button"].fit,
+		button.fit,
+		.button.fit {
+			width: 100%;
+		}
+
+		input[type="submit"].small,
+		input[type="reset"].small,
+		input[type="button"].small,
+		button.small,
+		.button.small {
+			font-size: 0.8em;
+		}
+
+		input[type="submit"].large,
+		input[type="reset"].large,
+		input[type="button"].large,
+		button.large,
+		.button.large {
+			font-size: 1.35em;
+		}
+
+		input[type="submit"].disabled, input[type="submit"]:disabled,
+		input[type="reset"].disabled,
+		input[type="reset"]:disabled,
+		input[type="button"].disabled,
+		input[type="button"]:disabled,
+		button.disabled,
+		button:disabled,
+		.button.disabled,
+		.button:disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+/* Main */
+
+	#main {
+		-moz-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-moz-transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+		transition: opacity 1s ease, transform 1s ease;
+		padding: 4.5em 3em 3em 3em ;
+		background: #ffffff50;
+		border-radius: 10px;
+		cursor: default;
+		max-width: 100%;
+		opacity: 0.95;
+		position: relative;
+		text-align: center;
+		width: 27em;
+	}
+
+		#main .avatar {
+			position: relative;
+			display: block;
+			margin-bottom: 1.5em;
+		}
+
+			#main .avatar img {
+				display: block;
+				width: 122px;
+				margin: 0 auto;
+				border-radius: 100%;
+				box-shadow: 0 0 0 0.5em #ffffff47;
+			}
+
+			#main .avatar:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: -3em;
+				width: calc(100% + 6em);
+				height: 1px;
+				z-index: -1;
+				background: #c8cccf;
+			}
+
+		@media screen and (max-width: 480px) {
+
+			#main {
+				padding: 4em 2em 2.5em 2em ;
+				width: 100%;
+			}
+
+				#main .avatar:before {
+					left: -2em;
+					width: calc(100% + 4em);
+				}
+
+		}
+
+		body.is-preload #main {
+			-moz-transform: rotateX(15deg);
+			-webkit-transform: rotateX(15deg);
+			-ms-transform: rotateX(15deg);
+			transform: rotateX(15deg);
+			opacity: 0;
+		}
+
+/* Footer */
+
+	#footer {
+		-moz-align-self: -moz-flex-end;
+		-webkit-align-self: -webkit-flex-end;
+		-ms-align-self: -ms-flex-end;
+		align-self: flex-end;
+		width: 100%;
+		padding: 1.5em 0 0 0;
+		color: rgba(255, 255, 255, 0.75);
+		cursor: default;
+		text-align: center;
+	}
+
+		#footer .copyright {
+			margin: 0;
+			padding: 0;
+			font-size: 0.9em;
+			list-style: none;
+		}
+
+			#footer .copyright li {
+				display: inline-block;
+				margin: 0 0 0 0.45em;
+				padding: 0 0 0 0.85em;
+				border-left: solid 1px rgba(255, 255, 255, 0.5);
+				line-height: 1;
+			}
+
+				#footer .copyright li:first-child {
+					border-left: 0;
+				}
+
+/* Wrapper */
+
+	#wrapper {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-perspective: 1000px;
+		-webkit-perspective: 1000px;
+		-ms-perspective: 1000px;
+		perspective: 1000px;
+		position: relative;
+		min-height: 100%;
+		padding: 1.5em;
+		z-index: 2;
+	}
+
+		#wrapper > * {
+			z-index: 1;
+		}
+
+		#wrapper:before {
+			content: '';
+			display: block;
+		}
+
+		@media screen and (max-width: 360px) {
+
+			#wrapper {
+				padding: 0.75em;
+			}
+
+		}
+
+		body.is-ie #wrapper {
+			height: 100%;
+		}
+
+
+/* Inline SVG icon adapter — preserves the original 3.75em buttons. */
+ul.icons li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-indent: 0;
+}
+
+ul.icons li a .icon-svg,
+ul.icons li a .icon-svg use {
+  width: 1.85rem;
+  height: 1.85rem;
+  flex: 0 0 auto;
+  color: #616f77;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color 0.2s ease-in-out, stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+ul.icons li a:hover .icon-svg,
+ul.icons li a:hover .icon-svg use {
+  color: #ff7496;
+}
+
+@media screen and (max-width: 480px) {
+  ul.icons li a .icon-svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+		</style>
+		<style>
 			/* Modal 样式调整 */
 			#modal {
 				display: none;
@@ -66,11 +1153,256 @@
 				z-index: 999;
 			}
 		</style>
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3236672628766591"
-     crossorigin="anonymous"></script>
-		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+		<noscript><style>
+/*
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Basic */
+
+	body:after {
+		display: none;
+	}
+
+/* Main */
+
+	#main {
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+		opacity: 1 !important;
+	}
+		</style></noscript>
 	</head>
 	<body class="is-preload">
+  <!-- 内置图标库：新增链接时复用下方对应的 icon-* 符号。 -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <symbol id="icon-arrow-up-right" viewBox="0 0 20 20">
+      <path d="M5 15 15 5M7 5h8v8"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 20 20">
+      <path d="M3 5.5h14v9H3zM3.5 6l6.5 5 6.5-5"/>
+    </symbol>
+    <symbol id="icon-blog" viewBox="0 0 20 20">
+      <path d="M5 3.5h8l2 2v11H5zM13 3.5v3h3M7.5 10h5M7.5 13h5"/>
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 20 20">
+      <path d="M15.5 8c0 4.2-5.5 8.5-5.5 8.5S4.5 12.2 4.5 8a5.5 5.5 0 1 1 11 0Z"/><circle cx="10" cy="8" r="1.8"/>
+    </symbol>
+    <symbol id="icon-server" viewBox="0 0 20 20">
+      <rect x="3" y="3.5" width="14" height="5" rx="1"/><rect x="3" y="11.5" width="14" height="5" rx="1"/><path d="M6 6h.01M6 14h.01M9 6h5M9 14h5"/>
+    </symbol>
+    <symbol id="icon-status" viewBox="0 0 20 20">
+      <path d="M2.5 10h3l2-4.5 3.5 9 2.2-4.5h4.3"/>
+    </symbol>
+    <symbol id="icon-stripe" viewBox="0 0 20 20">
+      <path d="M14.5 6.2c-1.1-.6-2.5-.9-3.8-.9-1.6 0-2.5.5-2.5 1.4 0 2.3 6.7 1.2 6.7 5.8 0 2.7-2.2 4.2-5.5 4.2-1.6 0-3.3-.4-4.3-1l.7-2.8c1.1.6 2.5 1.1 3.8 1.1 1.5 0 2.3-.5 2.3-1.3 0-2.4-6.7-1.1-6.7-5.8 0-2.7 2.1-4.2 5.6-4.2 1.4 0 2.9.3 4.4.9Z"/>
+    </symbol>
+    <symbol id="icon-kofi" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493c1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87c-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182c2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546c-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195c-1.09-2-1.298-4.155-1.298-7.506c0-2.181.857-3.402 3.012-3.714c1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545c1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142c0 1.533.858 2.857 1.949 3.897c.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896c1.117-1.039 1.974-2.364 1.974-3.897c0-1.662-1.247-3.142-3.039-3.142c-1.065 0-1.792.545-2.338 1.298c-.493-.753-1.246-1.298-2.312-1.298"/>
+    </symbol>
+    <symbol id="icon-ifdian" viewBox="0 0 24 24">
+      <path fill="currentColor" stroke="none" d="M9 14.234a.567.567 0 1 0 0 1.134a.567.567 0 0 0 0-1.134m5.351 1.705a.567.567 0 1 0 0 1.135a.567.567 0 0 0 0-1.135m8.401 1.436c-.189.095-.461.1-.713.013c-.169-.06-.352-.116-.534-.172c-.339-.104-.904-.276-1.011-.407a.533.533 0 1 0-.853.643c.059.08.139.146.22.209c-.816 1.131-4.398 3.382-9.464 2.273c-2.283-.5-3.819-1.413-4.444-2.639c-.451-.885-.348-1.797-.133-2.293c.62-1.29 5.097-4.261 7.955-5.943a.537.537 0 0 0 .188-.733c-.149-.254-.49-.356-.73-.189c-.231.135-1.015.601-2.015 1.236c-.338-.227-.923-.508-1.86-.6c-1.486-.148-4.92-.805-6.029-1.275C2.535 7.162.731 6.27 1.131 5.267c.092-.234.527-.613 1.47-.974a8.5 8.5 0 0 1 1.995-.492l-.212.103c-.642.312-1.343.662-1.813 1.075c-.034-.022-.07-.044-.094-.069a.527.527 0 0 0-.754-.017a.533.533 0 0 0-.017.756c.19.2.471.35.829.465l.039.014c1.245.383 3.458.336 6.578.211c1.345-.052 2.615-.102 3.674-.082c3.512.07 6.152 1.469 8.07 4.279c1.178 1.725.753 3.426.079 4.903a1.4 1.4 0 0 1-.231-.222a.54.54 0 0 0-.75-.085a.535.535 0 0 0-.086.751c.109.137.665.778 1.355.724l.037-.002c.021-.003.042.001.064-.003c.472-.086.768-.063 1.045.111c.367.232.547.37.511.485c-.021.073-.076.125-.168.177M8.19 11.418l-.315.231a1.6 1.6 0 0 1-.243-.32c.123-.038.33.007.558.089m14.733 4.356a1.9 1.9 0 0 0-.81-.27c.632-1.544 1.034-3.565-.336-5.572c-2.096-3.072-5.101-4.668-8.93-4.744c-1.091-.022-2.377.029-3.737.083c-1.58.063-3.683.145-5.112.027c.285-.155.588-.304.851-.431c1.006-.49 1.797-.872 1.535-1.548c-.137-.396-.547-.603-1.219-.618C3.748 2.669.688 3.489.138 4.872c-.31.779-.361 2.282 2.775 3.61c1.29.548 4.934 1.216 6.341 1.355c.397.039.701.119.931.205a75 75 0 0 0-.986.664c-.577-.329-1.521-.718-2.226-.237a.94.94 0 0 0-.435.768c-.01.385.224.763.486 1.066c-1.038.83-1.877 1.634-2.175 2.253c-.332.762-.467 2.008.153 3.224c.786 1.544 2.524 2.62 5.166 3.199c3.454.755 6.437.075 8.411-.966c1.099-.579 1.878-1.27 2.257-1.887l.356.113c.169.051.338.103.496.159c.522.181 1.1.157 1.545-.068l.025-.013c.336-.177.577-.46.683-.803c.285-.922-.528-1.432-1.018-1.74"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 20 20">
+      <rect x="3" y="3" width="14" height="14" rx="4"/><circle cx="10" cy="10" r="3.2"/><path d="M14.8 5.3h.01"/>
+    </symbol>
+    <symbol id="icon-telegram" viewBox="0 0 20 20">
+      <path d="m2.8 9.3 13.8-5.5-2.3 12.4-4.1-3.2-2.3 2v-3.8l6.2-5.2-7.5 4.2Z"/>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 20 20">
+      <path d="M7 16.8c-3 .9-3-1.5-4.2-1.8M11.2 18v-2.4c0-.8.1-1.4-.4-1.9 2.6-.3 5.3-1.3 5.3-5.8 0-1.3-.5-2.3-1.2-3.1.1-.3.5-1.5-.1-3.1 0 0-1-.3-3.2 1.2a11 11 0 0 0-5.8 0C3.6 1.4 2.6 1.7 2.6 1.7 2 3.3 2.4 4.5 2.5 4.8a4.5 4.5 0 0 0-1.2 3.1c0 4.5 2.7 5.5 5.3 5.8-.4.4-.6 1-.6 1.9V18"/>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 20 20">
+      <path d="M4 3.5h3.4l8.6 13h-3.4ZM15.5 3.5l-11 13"/>
+    </symbol>
+    <symbol id="icon-heart" viewBox="0 0 20 20">
+      <path d="M10 16.5S3.5 13 3.5 8A3.5 3.5 0 0 1 10 6.2 3.5 3.5 0 0 1 16.5 8c0 5-6.5 8.5-6.5 8.5Z"/>
+    </symbol>
+
+    <!-- 通用与导航 -->
+    <symbol id="icon-home" viewBox="0 0 20 20">
+      <path d="m3 9.2 7-6 7 6M5 8.4v8h10v-8M8 16.4v-5h4v5"/>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 20 20">
+      <circle cx="10" cy="6.3" r="3.2"/><path d="M3.8 17c.6-3.5 2.7-5.3 6.2-5.3s5.6 1.8 6.2 5.3"/>
+    </symbol>
+    <symbol id="icon-link" viewBox="0 0 20 20">
+      <path d="m8.2 12.8-1.1 1.1a3.2 3.2 0 0 1-4.5-4.5l2.6-2.6a3.2 3.2 0 0 1 4.5 0M11.8 7.2l1.1-1.1a3.2 3.2 0 0 1 4.5 4.5l-2.6 2.6a3.2 3.2 0 0 1-4.5 0M7.5 12.5l5-5"/>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="7.5"/><path d="M2.8 10h14.4M10 2.5c2.1 2.2 3.2 4.7 3.2 7.5S12.1 15.3 10 17.5C7.9 15.3 6.8 12.8 6.8 10S7.9 4.7 10 2.5Z"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 20 20">
+      <circle cx="8.7" cy="8.7" r="5.5"/><path d="m12.8 12.8 4 4"/>
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 20 20">
+      <path d="M3 5.5h14M3 10h14M3 14.5h14"/>
+    </symbol>
+    <symbol id="icon-plus" viewBox="0 0 20 20">
+      <path d="M10 3v14M3 10h14"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 20 20">
+      <path d="m3.5 10.2 4.1 4.1L16.8 5"/>
+    </symbol>
+    <symbol id="icon-info" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="7.5"/><path d="M10 9v5M10 6h.01"/>
+    </symbol>
+    <symbol id="icon-external-link" viewBox="0 0 20 20">
+      <path d="M9 4H4v12h12v-5M11 4h5v5M8.5 11.5 16 4"/>
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 20 20">
+      <path d="m7 4 6 6-6 6"/>
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 20 20">
+      <rect x="6.5" y="6.5" width="10" height="10" rx="1.5"/><path d="M13.5 6.5v-3h-10v10h3"/>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 20 20">
+      <path d="M10 3v9M6.5 9.5 10 13l3.5-3.5M3.5 16.5h13"/>
+    </symbol>
+    <symbol id="icon-upload" viewBox="0 0 20 20">
+      <path d="M10 13V4M6.5 7.5 10 4l3.5 3.5M3.5 16.5h13"/>
+    </symbol>
+    <symbol id="icon-sun" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="3.3"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.3 4.3l1.4 1.4M14.3 14.3l1.4 1.4M15.7 4.3l-1.4 1.4M5.7 14.3l-1.4 1.4"/>
+    </symbol>
+    <symbol id="icon-moon" viewBox="0 0 20 20">
+      <path d="M16.8 12.5A7.2 7.2 0 0 1 7.5 3.2a7.2 7.2 0 1 0 9.3 9.3Z"/>
+    </symbol>
+
+    <!-- 内容与沟通 -->
+    <symbol id="icon-rss" viewBox="0 0 20 20">
+      <circle cx="4.6" cy="15.4" r="1" fill="currentColor" stroke="none"/><path d="M3.6 9.3a7.1 7.1 0 0 1 7.1 7.1M3.6 4a12.4 12.4 0 0 1 12.4 12.4"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 20 20">
+      <path d="M3 4.2c2.8-.7 5.2-.1 7 1.5v11c-1.8-1.6-4.2-2.2-7-1.5ZM17 4.2c-2.8-.7-5.2-.1-7 1.5v11c1.8-1.6 4.2-2.2 7-1.5Z"/>
+    </symbol>
+    <symbol id="icon-bookmark" viewBox="0 0 20 20">
+      <path d="M5 3.2h10v14l-5-3-5 3Z"/>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 20 20">
+      <path d="M5 2.8h7l3 3v11.4H5zM12 2.8v3h3M7.5 10h5M7.5 13h5"/>
+    </symbol>
+    <symbol id="icon-folder" viewBox="0 0 20 20">
+      <path d="M2.8 5.2h5l1.5 2H17v9H2.8zM2.8 5.2V4h5l1.5 1.2"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 20 20">
+      <path d="m3 10 7-7h6.5v6.5l-7 7Z"/><circle cx="13.5" cy="6" r="1"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 20 20">
+      <rect x="3" y="4.5" width="14" height="12.5" rx="1.5"/><path d="M6.5 2.5v4M13.5 2.5v4M3 8.5h14"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="7.5"/><path d="M10 5.5V10l3 2"/>
+    </symbol>
+    <symbol id="icon-bell" viewBox="0 0 20 20">
+      <path d="M4 14.5h12l-1.5-2V8a4.5 4.5 0 0 0-9 0v4.5ZM8 16.5a2.2 2.2 0 0 0 4 0"/>
+    </symbol>
+    <symbol id="icon-message" viewBox="0 0 20 20">
+      <path d="M3 3.5h14v10H8l-4.5 3v-3H3zM6.5 7h7M6.5 10h4"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 20 20">
+      <path d="m2.8 9.4 14.4-6-3.6 13.2-4-4-2.7 2.2v-4.1ZM7 10.7l6.7-4.1"/>
+    </symbol>
+
+    <!-- 开发与基础设施 -->
+    <symbol id="icon-code" viewBox="0 0 20 20">
+      <path d="m7 5-5 5 5 5M13 5l5 5-5 5M11.5 3.5l-3 13"/>
+    </symbol>
+    <symbol id="icon-terminal" viewBox="0 0 20 20">
+      <rect x="2.5" y="3.5" width="15" height="13" rx="1.5"/><path d="m5.5 7 3 3-3 3M10.5 13h4"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 20 20">
+      <ellipse cx="10" cy="4.8" rx="6.5" ry="2.5"/><path d="M3.5 4.8v5c0 1.4 2.9 2.5 6.5 2.5s6.5-1.1 6.5-2.5v-5M3.5 9.8v5c0 1.4 2.9 2.5 6.5 2.5s6.5-1.1 6.5-2.5v-5"/>
+    </symbol>
+    <symbol id="icon-cloud" viewBox="0 0 20 20">
+      <path d="M6 15.5h9a3 3 0 0 0 .3-6 5.2 5.2 0 0 0-9.9-1.3A3.7 3.7 0 0 0 6 15.5Z"/>
+    </symbol>
+    <symbol id="icon-wifi" viewBox="0 0 20 20">
+      <path d="M2.5 7.2a11.2 11.2 0 0 1 15 0M5.2 10.2a7.2 7.2 0 0 1 9.6 0M8 13.1a3 3 0 0 1 4 0M10 16h.01"/>
+    </symbol>
+    <symbol id="icon-cpu" viewBox="0 0 20 20">
+      <rect x="5" y="5" width="10" height="10" rx="1"/><rect x="8" y="8" width="4" height="4"/><path d="M7 2.5V5M10 2.5V5M13 2.5V5M7 15v2.5M10 15v2.5M13 15v2.5M2.5 7H5M2.5 10H5M2.5 13H5M15 7h2.5M15 10h2.5M15 13h2.5"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 20 20">
+      <path d="M10 2.5 16 5v4.4c0 4-2.2 6.7-6 8.1-3.8-1.4-6-4.1-6-8.1V5Z"/><path d="m7 10 2 2 4-4"/>
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 20 20">
+      <rect x="4" y="8" width="12" height="9" rx="1.5"/><path d="M6.5 8V6a3.5 3.5 0 0 1 7 0v2M10 11.5v2"/>
+    </symbol>
+    <symbol id="icon-key" viewBox="0 0 20 20">
+      <circle cx="6.5" cy="11.5" r="3.5"/><path d="m9 9 7-7M12.5 5.5l2 2M14.5 3.5l2 2"/>
+    </symbol>
+    <symbol id="icon-monitor" viewBox="0 0 20 20">
+      <rect x="2.5" y="3.5" width="15" height="11" rx="1.5"/><path d="M7 17h6M10 14.5V17"/>
+    </symbol>
+    <symbol id="icon-package" viewBox="0 0 20 20">
+      <path d="m3 6 7-3.5L17 6v8l-7 3.5L3 14ZM3 6l7 3.5L17 6M10 9.5v8M6.5 4.2l7 3.5"/>
+    </symbol>
+
+    <!-- 媒体 -->
+    <symbol id="icon-camera" viewBox="0 0 20 20">
+      <path d="M3 6h3l1.3-2h5.4L14 6h3v10H3z"/><circle cx="10" cy="11" r="3.2"/>
+    </symbol>
+    <symbol id="icon-image" viewBox="0 0 20 20">
+      <rect x="3" y="3.5" width="14" height="13" rx="1.5"/><circle cx="7" cy="7.5" r="1.3"/><path d="m4 15 4.2-4 2.5 2.2 2.1-2 4.2 3.8"/>
+    </symbol>
+    <symbol id="icon-video" viewBox="0 0 20 20">
+      <rect x="2.5" y="5" width="10.5" height="10" rx="1.5"/><path d="m13 8 4.5-2v8L13 12"/>
+    </symbol>
+    <symbol id="icon-play" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="7.5"/><path d="m8 6.8 5 3.2-5 3.2Z"/>
+    </symbol>
+    <symbol id="icon-music" viewBox="0 0 20 20">
+      <path d="M8 15V5l8-2v10M8 7l8-2"/><circle cx="5.5" cy="15" r="2.5"/><circle cx="13.5" cy="13" r="2.5"/>
+    </symbol>
+    <symbol id="icon-headphones" viewBox="0 0 20 20">
+      <path d="M3.5 11V9a6.5 6.5 0 0 1 13 0v2M3.5 11H6v5H4.5a1 1 0 0 1-1-1ZM16.5 11H14v5h1.5a1 1 0 0 0 1-1Z"/>
+    </symbol>
+
+    <!-- 支持与支付 -->
+    <symbol id="icon-coffee" viewBox="0 0 20 20">
+      <path d="M3 6.5h11v5a4.5 4.5 0 0 1-4.5 4.5h-2A4.5 4.5 0 0 1 3 11.5ZM14 8h1.5a2 2 0 0 1 0 4H14M2 17.5h14M6 2.5v2M10 2.5v2"/>
+    </symbol>
+    <symbol id="icon-gift" viewBox="0 0 20 20">
+      <path d="M3 8h14v9H3zM2.5 5.5h15V8h-15zM10 5.5V17M10 5.5C8.2 5.5 6 5 6 3.5 6 2.6 6.7 2 7.6 2 9.2 2 10 5.5 10 5.5ZM10 5.5c1.8 0 4-.5 4-2 0-.9-.7-1.5-1.6-1.5C10.8 2 10 5.5 10 5.5Z"/>
+    </symbol>
+    <symbol id="icon-card" viewBox="0 0 20 20">
+      <rect x="2.5" y="4" width="15" height="12" rx="1.5"/><path d="M2.5 8h15M5 12.5h3"/>
+    </symbol>
+    <symbol id="icon-wallet" viewBox="0 0 20 20">
+      <path d="M3 5h12.5a1.5 1.5 0 0 1 1.5 1.5V16H4.5A1.5 1.5 0 0 1 3 14.5ZM3 6V4.5A1.5 1.5 0 0 1 4.5 3h10v2M13 9h4v4h-4a2 2 0 0 1 0-4Z"/>
+    </symbol>
+
+    <!-- 更多社交平台 -->
+    <symbol id="icon-youtube" viewBox="0 0 20 20">
+      <rect x="2.5" y="5" width="15" height="10" rx="3"/><path d="m8.5 8 4.5 2-4.5 2Z"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 20 20">
+      <rect x="3" y="3" width="14" height="14" rx="2"/><path d="M6.2 8.5V14M6.2 6h.01M9.2 14V8.5m0 2.2a2.6 2.6 0 0 1 5.2.5V14"/>
+    </symbol>
+    <symbol id="icon-discord" viewBox="0 0 20 20">
+      <path d="M5.2 5.2A12 12 0 0 1 8 4.4l.6 1a9 9 0 0 1 2.8 0l.6-1a12 12 0 0 1 2.8.8c1.6 2.1 2.4 4.5 2.2 7.2a11 11 0 0 1-3.4 1.8l-.9-1.2a7.5 7.5 0 0 1-5.4 0l-.9 1.2A11 11 0 0 1 3 12.4c-.2-2.7.6-5.1 2.2-7.2Z"/><path d="M7.4 10h.01M12.6 10h.01"/>
+    </symbol>
+    <symbol id="icon-weibo" viewBox="0 0 20 20">
+      <path d="M15.5 7.8c1.1.5 1.8 1.4 1.8 2.5 0 2.9-3.7 5.3-8.2 5.3S2 13.8 2 11.4c0-1.8 1.8-3.8 4.8-5.3 3.8-1.9 5.3-.6 4.4 1.8-.4 1 .8.4 1.8.3.9-.1 1.8-.1 2.5-.4Z"/><circle cx="8.5" cy="11.3" r="2.3"/><path d="M13.5 5.5a3.3 3.3 0 0 1 3 3M13.7 2.8a6 6 0 0 1 5 5"/>
+    </symbol>
+    <symbol id="icon-bilibili" viewBox="0 0 20 20">
+      <rect x="2.5" y="6" width="15" height="10.5" rx="2"/><path d="m6 2.5 4 3.5 4-3.5M7 10v2M13 10v2"/>
+    </symbol>
+    <symbol id="icon-zhihu" viewBox="0 0 20 20">
+      <path d="M2.5 5h7M6 3v6.5c0 3-1.2 5.2-3.5 6.5M3 10.5c2.2.8 4.2 2.2 5.5 4M11 5h6v8.5h-6zM12.5 13.5l3.5 2v-2"/>
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 20 20">
+      <circle cx="10" cy="10" r="7.5"/><path d="M11.5 17.2V11h2.2l.4-2.5h-2.6V7c0-.8.4-1.3 1.4-1.3h1.4V3.5c-.6-.1-1.3-.2-2-.2-2.1 0-3.4 1.3-3.4 3.5v1.7H6.7V11h2.2v6.2"/>
+    </symbol>
+    <symbol id="icon-tiktok" viewBox="0 0 20 20">
+      <path d="M11 3v9a3.7 3.7 0 1 1-3.7-3.7M11 3c.4 2.4 1.7 3.7 4 4"/>
+    </symbol>
+  </svg>
 		<!-- Modal -->
 		<div id="modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#ffffff50; padding:20px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;">
 			<a href="#" id="close-modal" style="float:right; text-decoration:none; font-size:20px;">&times;</a>
@@ -109,24 +1441,25 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="image/avatar.jpg" alt="" /></span>
+							<span class="avatar"><img src="image/avatar.webp" alt="春夏的头像" decoding="async" fetchpriority="high" /></span>
 							<h1>春夏</h1>
 							<p>热爱可抵漫长岁月</p>
 						</header>
 						<footer>
 							<ul class="icons">
-								<li><a href="http://www.nange.cn/" target="_blank" class="icon fa-solid fa-blog" title="我的互联网冲浪日记"><span class="label">博客</span></a></li>
-								<li><a href="http://api.aapls.com/" target="_blank" rel="noopener" class="icon fa-solid fa-location-dot" title="GeoIP 查询"><span class="label"> IP 信息查询</span></a></li>
-								<li><a href="http://server.aapls.com/" target="_blank" rel="noopener" class="icon fa-regular fa-server" title="服务器探针"><span class="label">服务器探针</span></a></li>
-								<li><a href="http://status.nange.cn/" target="_blank" rel="noopener" class="icon fa-brands fa-sellsy" title="服务状态"><span class="label">服务状态</span></a></li>
-								<li><a href="https://donate.stripe.com/28obMffW78Pogb6145" target="_blank" rel="noopener" class="icon fa-brands fa-stripe-s" title="捐赠支持"><span class="label">捐赠支持</span></a></li>
-								<li><a href="http://www.instagram.com/itskip" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-instagram" title="关注我的 Instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="http://t.me/CloudEvent" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-telegram" title="收藏夹"><span class="label">Telegram</span></a></li>
-								<li><a href="http://github.com/xOS" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-github-alt"  title="Fork me on Github"><span class="label">Github</span></a></li>
-								<li><a href="http://x.com/OneTip" target="_blank" rel="nofollow noopener" class="icon fa-brands fa-x-twitter" title="Twitter 关注我"><span class="label">Twitter</span></a></li>
-								<li><a href="https://ifdian.net/a/herby" target="_blank" rel="nofollow noopener" class="icon fa fa-hand-holding-heart" title="爱发电赞助"><span class="label">爱发电赞助</span></a></li>
-								<li><a href="mailto:about#nange.cn" target="_blank" rel="nofollow noopener" class="icon fa-solid fa-envelope" title="给我发邮件"><span class="label">Email</span></a></li>
-								<!-- <li><a href="#about" class="icon fa-regular fa-messages" title="给我留言"><span class="label">留言</span></a></li> -->
+								<li><a href="http://www.nange.cn/" target="_blank" class="icon" title="我的互联网冲浪日记"><svg class="icon-svg" aria-hidden="true"><use href="#icon-blog"/></svg><span class="label">博客</span></a></li>
+								<li><a href="http://api.aapls.com/" target="_blank" rel="noopener" class="icon" title="GeoIP 查询"><svg class="icon-svg" aria-hidden="true"><use href="#icon-location"/></svg><span class="label"> IP 信息查询</span></a></li>
+								<li><a href="http://server.aapls.com/" target="_blank" rel="noopener" class="icon" title="服务器探针"><svg class="icon-svg" aria-hidden="true"><use href="#icon-server"/></svg><span class="label">服务器探针</span></a></li>
+								<li><a href="http://status.nange.cn/" target="_blank" rel="noopener" class="icon" title="服务状态"><svg class="icon-svg" aria-hidden="true"><use href="#icon-status"/></svg><span class="label">服务状态</span></a></li>
+								<li><a href="https://donate.stripe.com/28obMffW78Pogb6145" target="_blank" rel="noopener" class="icon" title="捐赠支持"><svg class="icon-svg" aria-hidden="true"><use href="#icon-stripe"/></svg><span class="label">捐赠支持</span></a></li>
+								<li><a href="http://www.instagram.com/itskip" target="_blank" rel="nofollow noopener" class="icon" title="关注我的 Instagram"><svg class="icon-svg" aria-hidden="true"><use href="#icon-instagram"/></svg><span class="label">Instagram</span></a></li>
+								<li><a href="http://t.me/CloudEvent" target="_blank" rel="nofollow noopener" class="icon" title="收藏夹"><svg class="icon-svg" aria-hidden="true"><use href="#icon-telegram"/></svg><span class="label">Telegram</span></a></li>
+								<li><a href="http://github.com/xOS" target="_blank" rel="nofollow noopener" class="icon" title="Fork me on Github"><svg class="icon-svg" aria-hidden="true"><use href="#icon-github"/></svg><span class="label">Github</span></a></li>
+								<li><a href="http://x.com/OneTip" target="_blank" rel="nofollow noopener" class="icon" title="Twitter 关注我"><svg class="icon-svg" aria-hidden="true"><use href="#icon-x"/></svg><span class="label">Twitter</span></a></li>
+								<li><a href="https://ifdian.net/a/herby" target="_blank" rel="nofollow noopener" class="icon" title="爱发电赞助"><svg class="icon-svg" aria-hidden="true"><use href="#icon-ifdian"/></svg><span class="label">爱发电赞助</span></a></li>
+								<li><a href="https://ko-fi.com/nobra" target="_blank" rel="nofollow noopener" class="icon" title="Buy a Coffee for me"><svg class="icon-svg" aria-hidden="true"><use href="#icon-kofi"/></svg><span class="label">Ko-fi</span></a></li>
+								<li><a href="mailto:about#nange.cn" target="_blank" rel="nofollow noopener" class="icon" title="给我发邮件"><svg class="icon-svg" aria-hidden="true"><use href="#icon-mail"/></svg><span class="label">Email</span></a></li>
+								<!-- <li><a href="#about" class="icon" title="给我留言"><svg class="icon-svg" aria-hidden="true"><use href="#icon-message"/></svg><span class="label">留言</span></a></li> -->
 							</ul>
 						</footer>
 					</section>
@@ -164,6 +1497,3 @@
 			</script> -->
 	</body>
 </html>
-
-
-
